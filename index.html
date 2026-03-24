@@ -1,907 +1,149 @@
-<index.html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>South Bay & Co. — Your Neighborhood, Handled.</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Jost:wght@200;300;400;500&display=swap" rel="stylesheet">
-<style>
-*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+South Bay & Co.
+Services
+About
+Contact
+Get In Touch
+Manhattan Beach · South Bay, California
+Hand Over Your
+To-Do List.
+South Bay & Co. is your trusted local concierge — handling life's details so you can enjoy the moments that matter most.
 
-:root {
-  --navy: #18243C;
-  --navy-mid: #22325A;
-  --sand: #EDE8DF;
-  --sand-light: #F7F4EF;
-  --cream: #FAFAF7;
-  --gold: #B8965A;
-  --gold-light: #D4B88A;
-  --gold-pale: #F0E6D3;
-  --text: #18243C;
-  --muted: #6B7591;
-  --white: #FFFFFF;
-}
+Get In Touch
+See Our Services
+Pet & Home Care
+Events & Experiences
+Travel Planning
+Personal Shopping
+Personal Styling
+Concierge Errands
+À La Carte
+Book exactly what you need, when you need it. No memberships, no retainers, no minimums.
+Locally Rooted
+A 10+ year Manhattan Beach local with deep community ties. Someone your neighbors already know.
+Always Personal
+Every job gets our full attention. We respond within 24 hours and treat every client like a neighbor.
+What We Do
+Everything you need,
+handled beautifully.
+Three focused service areas covering the moments that matter most — from your pet to your parties to your personal life.
 
-html { scroll-behavior: smooth; }
-body {
-  font-family: 'Jost', sans-serif;
-  background: var(--cream);
-  color: var(--text);
-  overflow-x: hidden;
-}
+Events &
+Experiences
+From jaw-dropping kids birthdays to polished corporate events — every detail handled, every moment unforgettable.
 
-/* ── NAV ── */
-nav {
-  position: fixed; top: 0; left: 0; right: 0; z-index: 200;
-  display: flex; justify-content: space-between; align-items: center;
-  padding: 28px 60px;
-  transition: all 0.4s;
-}
-nav.scrolled {
-  background: rgba(250,250,247,0.97);
-  backdrop-filter: blur(16px);
-  padding: 18px 60px;
-  box-shadow: 0 1px 0 rgba(24,36,60,0.07);
-}
-.nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 20px; font-weight: 400;
-  color: var(--white); letter-spacing: 0.05em;
-  text-decoration: none; transition: color 0.4s;
-}
-nav.scrolled .nav-logo { color: var(--navy); }
-.nav-links { display: flex; gap: 40px; list-style: none; }
-.nav-links a {
-  font-size: 11px; font-weight: 400;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: rgba(255,255,255,0.7); text-decoration: none;
-  transition: color 0.3s;
-}
-nav.scrolled .nav-links a { color: var(--muted); }
-.nav-links a:hover { color: var(--gold); }
-nav.scrolled .nav-links a:hover { color: var(--gold); }
-.nav-cta {
-  font-size: 11px; font-weight: 500;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: var(--navy); background: var(--gold);
-  padding: 10px 24px; text-decoration: none;
-  transition: background 0.3s, opacity 0.4s;
-}
-.nav-cta-wrap { opacity: 0; transition: opacity 0.4s; pointer-events: none; }
-nav.scrolled .nav-cta-wrap { opacity: 1; pointer-events: auto; }
-.nav-cta:hover { background: var(--gold-light); }
+Corporate events & team celebrations
+Rehearsal dinners
+Kids birthday parties
+Baby & bridal showers
+Holiday & Christmas parties
+Dinner parties & supper clubs
+Vendor sourcing & day-of coordination
+From $200 — custom quotes available
+Pet &
+Home Care
+Your pets and home looked after with the same care you'd give them yourself. Always reliable, always loving.
 
-/* ── HERO ── */
-.hero {
-  min-height: 100vh;
-  background: var(--navy);
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  position: relative;
-  overflow: hidden;
-}
-.hero-left {
-  display: flex; flex-direction: column;
-  justify-content: center;
-  padding: 140px 60px 80px;
-  position: relative; z-index: 2;
-}
-.hero-right {
-  position: relative; overflow: hidden;
-}
-.hero-right::before {
-  content: '';
-  position: absolute; inset: 0;
-  background: linear-gradient(110deg, var(--navy) 0%, transparent 40%);
-  z-index: 1;
-}
-.hero-bg-pattern {
-  position: absolute; inset: 0;
-  background:
-    radial-gradient(ellipse 80% 60% at 70% 40%, rgba(184,150,90,0.18) 0%, transparent 70%),
-    radial-gradient(ellipse 50% 80% at 90% 80%, rgba(34,50,90,0.6) 0%, transparent 60%);
-  z-index: 0;
-}
-.hero-grid-lines {
-  position: absolute; inset: 0; z-index: 0;
-  background-image:
-    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-  background-size: 60px 60px;
-}
-.hero-eyebrow {
-  font-size: 10px; font-weight: 400;
-  letter-spacing: 0.24em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 28px;
-  display: flex; align-items: center; gap: 14px;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.2s;
-}
-.eyebrow-line { width: 32px; height: 1px; background: var(--gold); }
-.hero h1 {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(44px, 5.5vw, 80px);
-  font-weight: 300; line-height: 1.08;
-  color: var(--white); margin-bottom: 28px;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.4s;
-}
-.hero h1 em { font-style: italic; color: var(--gold-light); }
-.hero-sub {
-  font-size: 15px; font-weight: 300; line-height: 1.85;
-  color: rgba(255,255,255,0.58); max-width: 420px;
-  margin-bottom: 52px;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.6s;
-}
-.hero-actions {
-  display: flex; align-items: center; gap: 28px;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 0.8s;
-}
-.btn-primary {
-  display: inline-flex; align-items: center; gap: 10px;
-  background: var(--gold); color: var(--navy);
-  padding: 16px 36px; font-size: 12px; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  text-decoration: none; transition: all 0.3s;
-}
-.btn-primary:hover { background: var(--gold-light); transform: translateY(-2px); }
-.btn-secondary {
-  font-size: 12px; font-weight: 400;
-  letter-spacing: 0.1em; text-transform: uppercase;
-  color: rgba(255,255,255,0.5); text-decoration: none;
-  border-bottom: 1px solid rgba(255,255,255,0.2);
-  padding-bottom: 2px; transition: color 0.3s, border-color 0.3s;
-}
-.btn-secondary:hover { color: var(--gold-light); border-color: var(--gold); }
-.hero-service-pills {
-  position: absolute; bottom: 48px; left: 60px;
-  display: flex; gap: 10px; flex-wrap: wrap; z-index: 2;
-  opacity: 0; animation: fadeUp 0.8s ease forwards 1.1s;
-}
-.pill {
-  font-size: 10px; font-weight: 400; letter-spacing: 0.1em;
-  text-transform: uppercase; color: rgba(255,255,255,0.5);
-  border: 1px solid rgba(255,255,255,0.12);
-  padding: 7px 14px;
-}
+Dog walks (30 min)
+Pet sit visits (up to 1 hr)
+Overnight pet & house sitting
+House checks while traveling
+Mail collection & plant watering
+From $35 per visit
+Executive &
+Personal Assistance
+Your personal assistant, travel agent, stylist and shopper — all in one trusted person.
 
-/* ── TRUST BAR ── */
-.trust-bar {
-  background: var(--gold);
-  padding: 16px 60px;
-  display: flex; justify-content: center; gap: 60px; align-items: center;
-  overflow: hidden;
-}
-.trust-item {
-  display: flex; align-items: center; gap: 10px;
-  font-size: 10px; font-weight: 500; letter-spacing: 0.14em;
-  text-transform: uppercase; color: var(--navy); white-space: nowrap;
-}
-.trust-item svg { opacity: 0.6; }
+Travel planning & itineraries
+Personal shopping & gift sourcing
+Personal styling & wardrobe
+Home organization & decluttering
+Concierge errands & vendor management
+Grocery & pantry stocking
+From $65/hr
+Why South Bay & Co.
+"Life is filled with endless demands. We're here to make sure every moment counts."
 
-/* ── SHARED SECTION STYLES ── */
-.section-tag {
-  font-size: 10px; font-weight: 500;
-  letter-spacing: 0.22em; text-transform: uppercase;
-  color: var(--gold); margin-bottom: 18px;
-  display: flex; align-items: center; gap: 14px;
-}
-.tag-line { width: 28px; height: 1px; background: var(--gold); }
-.section-title {
-  font-family: 'Playfair Display', serif;
-  font-size: clamp(34px, 3.5vw, 52px);
-  font-weight: 300; line-height: 1.18; color: var(--navy);
-}
-.section-title em { font-style: italic; color: var(--muted); }
-.section-body {
-  font-size: 15px; font-weight: 300; line-height: 1.85;
-  color: var(--muted); max-width: 500px;
-}
+South Bay & Co. was built by a Manhattan Beach local who spent years showing up for neighbors before making it official. With a finance background and deep community roots, we bring care, discretion and organization to every single job.
 
-/* ── SERVICES ── */
-.services-section {
-  padding: 110px 60px;
-  background: var(--cream);
-}
-.services-header {
-  display: grid; grid-template-columns: 1fr 1fr;
-  gap: 60px; align-items: end; margin-bottom: 64px;
-}
-.services-header-right {
-  display: flex; flex-direction: column;
-  justify-content: flex-end; padding-bottom: 6px;
-}
-.services-header-right p {
-  font-size: 15px; font-weight: 300; line-height: 1.85;
-  color: var(--muted);
-}
-.services-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px; background: var(--sand);
-}
-.services-grid-bottom {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2px; background: var(--sand);
-  margin-top: 2px;
-}
-.svc-card {
-  background: var(--cream);
-  padding: 44px 40px;
-  position: relative; overflow: hidden;
-  cursor: default;
-  transition: background 0.35s;
-}
-.svc-card::after {
-  content: '';
-  position: absolute;
-  left: 0; bottom: 0; right: 0;
-  height: 2px; background: var(--gold);
-  transform: scaleX(0); transform-origin: left;
-  transition: transform 0.4s ease;
-}
-.svc-card:hover { background: var(--white); }
-.svc-card:hover::after { transform: scaleX(1); }
-.svc-number {
-  font-family: 'Playfair Display', serif;
-  font-size: 11px; font-weight: 400;
-  color: var(--gold); letter-spacing: 0.1em;
-  margin-bottom: 20px; display: block;
-}
-.svc-card h3 {
-  font-family: 'Playfair Display', serif;
-  font-size: 22px; font-weight: 400;
-  color: var(--navy); margin-bottom: 12px; line-height: 1.3;
-}
-.svc-card p {
-  font-size: 13px; font-weight: 300; line-height: 1.75;
-  color: var(--muted); margin-bottom: 22px;
-}
-.svc-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
-.svc-list li {
-  font-size: 12px; color: var(--muted);
-  padding-left: 14px; position: relative; line-height: 1.5;
-}
-.svc-list li::before {
-  content: '–'; position: absolute; left: 0;
-  color: var(--gold); font-size: 10px; top: 1px;
-}
-.svc-price {
-  margin-top: 22px; padding-top: 18px;
-  border-top: 1px solid var(--sand);
-  font-size: 11px; font-weight: 500;
-  letter-spacing: 0.1em; text-transform: uppercase; color: var(--gold);
-}
+Whether it's letting your dog out in a pinch, planning your rehearsal dinner, or booking your family's dream vacation — no task is too big or too small.
 
-/* ── ABOUT ── */
-.about-section {
-  background: var(--navy);
-  display: grid; grid-template-columns: 5fr 7fr;
-  min-height: 600px;
-}
-.about-left {
-  padding: 100px 60px;
-  border-right: 1px solid rgba(255,255,255,0.07);
-  display: flex; flex-direction: column; justify-content: center;
-}
-.about-left .section-tag { color: var(--gold); }
-.about-left .section-tag .tag-line { background: var(--gold); }
-.about-left .section-title { color: var(--white); margin-bottom: 28px; }
-.about-left .section-body { color: rgba(255,255,255,0.5); margin-bottom: 48px; }
-.about-stats {
-  display: grid; grid-template-columns: 1fr 1fr; gap: 1px;
-  background: rgba(255,255,255,0.06);
-}
-.stat-box { padding: 24px 20px; background: rgba(255,255,255,0.03); }
-.stat-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 38px; font-weight: 300;
-  color: var(--gold); line-height: 1; margin-bottom: 6px;
-}
-.stat-lbl {
-  font-size: 10px; font-weight: 400;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-}
-.about-right {
-  padding: 100px 72px;
-  display: flex; flex-direction: column; justify-content: center;
-}
-.about-quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 30px; font-weight: 300; font-style: italic;
-  color: rgba(255,255,255,0.88); line-height: 1.5;
-  margin-bottom: 36px; padding-bottom: 36px;
-  border-bottom: 1px solid rgba(255,255,255,0.08);
-}
-.about-body {
-  font-size: 15px; font-weight: 300; line-height: 1.9;
-  color: rgba(255,255,255,0.48);
-}
-.about-body + .about-body { margin-top: 20px; }
-.about-values {
-  margin-top: 44px;
-  display: flex; flex-direction: column; gap: 16px;
-}
-.value-row {
-  display: flex; align-items: flex-start; gap: 16px;
-}
-.value-dot {
-  width: 6px; height: 6px; border-radius: 50%;
-  background: var(--gold); flex-shrink: 0; margin-top: 7px;
-}
-.value-text { font-size: 13px; color: rgba(255,255,255,0.45); line-height: 1.6; }
-.value-text strong { color: rgba(255,255,255,0.75); font-weight: 400; }
+10+
+Years in South Bay
+A neighbor you already know and trust
+3
+Service Categories
+Events, pet care, and personal assistance
+24h
+Response Guarantee
+We always get back to you within 24 hours
+0
+Commitments Required
+Book once, book often, or just when you need us
+What Neighbors Say
+Trusted by
+the community.
+★★★★★
+"She came over and let my dog out three times while I was in the hospital. I didn't even have to ask twice. That kind of neighbor is one in a million."
 
-/* ── TESTIMONIALS ── */
-.testimonials-section { padding: 110px 60px; background: var(--sand-light); }
-.testimonials-header { margin-bottom: 60px; }
-.testimonials-grid {
-  display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px;
-}
-.tcard {
-  background: var(--white); padding: 44px 40px;
-  position: relative; border-top: 2px solid transparent;
-  transition: border-color 0.3s;
-}
-.tcard:hover { border-top-color: var(--gold); }
-.tcard-quote {
-  font-family: 'Playfair Display', serif;
-  font-size: 56px; font-weight: 300;
-  color: var(--gold-pale); line-height: 0.7;
-  margin-bottom: 24px;
-}
-.tcard-text {
-  font-family: 'Playfair Display', serif;
-  font-size: 17px; font-weight: 300; font-style: italic;
-  line-height: 1.65; color: var(--navy); margin-bottom: 28px;
-}
-.tcard-author { font-size: 11px; font-weight: 500; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text); }
-.tcard-location { font-size: 11px; color: var(--gold); margin-top: 4px; letter-spacing: 0.06em; }
-.tcard-service {
-  margin-top: 20px; padding-top: 20px;
-  border-top: 1px solid var(--sand);
-  font-size: 10px; font-weight: 500;
-  letter-spacing: 0.12em; text-transform: uppercase;
-  color: var(--muted);
-}
+Manhattan Beach Neighbor
+Pet & Home Care
+★★★★★
+"My cat was in the best hands all weekend. Updates and photos throughout. I came home to a happy cat and a spotless home."
 
-/* ── HOW IT WORKS ── */
-.how-section {
-  padding: 110px 60px;
-  background: var(--cream);
-}
-.how-grid {
-  display: grid; grid-template-columns: repeat(4, 1fr);
-  gap: 2px; background: var(--sand); margin-top: 60px;
-}
-.how-card {
-  background: var(--cream); padding: 44px 36px;
-  position: relative;
-}
-.how-num {
-  font-family: 'Playfair Display', serif;
-  font-size: 52px; font-weight: 300;
-  color: var(--gold-pale); line-height: 1;
-  margin-bottom: 20px; display: block;
-}
-.how-card h4 {
-  font-family: 'Playfair Display', serif;
-  font-size: 19px; font-weight: 400;
-  color: var(--navy); margin-bottom: 12px;
-}
-.how-card p {
-  font-size: 13px; font-weight: 300;
-  line-height: 1.75; color: var(--muted);
-}
+Local Neighbor
+Pet & Home Care
+★★★★★
+"I don't know how I would have pulled off my son's birthday party without her. Every single detail handled perfectly. Worth every penny."
 
-/* ── CONTACT ── */
-.contact-section {
-  display: grid; grid-template-columns: 1fr 1fr;
-  background: var(--navy);
-}
-.contact-left {
-  padding: 100px 60px;
-  border-right: 1px solid rgba(255,255,255,0.07);
-  display: flex; flex-direction: column; justify-content: center;
-}
-.contact-left .section-tag { color: var(--gold); }
-.contact-left .section-tag .tag-line { background: var(--gold); }
-.contact-left .section-title { color: var(--white); margin-bottom: 28px; }
-.contact-left p { font-size: 15px; font-weight: 300; line-height: 1.85; color: rgba(255,255,255,0.45); margin-bottom: 48px; }
-.contact-details { display: flex; flex-direction: column; gap: 24px; }
-.cdetail { display: flex; gap: 16px; align-items: flex-start; }
-.cdetail-icon {
-  width: 38px; height: 38px; flex-shrink: 0;
-  border: 1px solid rgba(255,255,255,0.12);
-  display: flex; align-items: center; justify-content: center;
-  font-size: 15px;
-}
-.cdetail-body { }
-.cdetail-label { font-size: 10px; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin-bottom: 4px; }
-.cdetail-value { font-size: 14px; font-weight: 300; color: rgba(255,255,255,0.55); }
-.contact-right { padding: 100px 72px; display: flex; flex-direction: column; justify-content: center; }
-.contact-form { display: flex; flex-direction: column; gap: 14px; }
-.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-.fg { display: flex; flex-direction: column; gap: 7px; }
-.fg label {
-  font-size: 10px; font-weight: 500;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  color: rgba(255,255,255,0.35);
-}
-.fg input, .fg select, .fg textarea {
-  font-family: 'Jost', sans-serif;
-  font-size: 14px; font-weight: 300;
-  color: var(--white);
-  background: rgba(255,255,255,0.05);
-  border: 1px solid rgba(255,255,255,0.1);
-  padding: 14px 18px; outline: none;
-  transition: border-color 0.3s; resize: none;
-  appearance: none;
-}
-.fg input::placeholder, .fg textarea::placeholder { color: rgba(255,255,255,0.2); }
-.fg input:focus, .fg select:focus, .fg textarea:focus { border-color: var(--gold); }
-.fg select option { background: var(--navy); color: var(--white); }
-.fg textarea { height: 110px; }
-.submit-btn {
-  background: var(--gold); color: var(--navy);
-  border: none; padding: 18px 40px;
-  font-family: 'Jost', sans-serif;
-  font-size: 12px; font-weight: 500;
-  letter-spacing: 0.14em; text-transform: uppercase;
-  cursor: pointer; align-self: flex-start;
-  margin-top: 6px; transition: all 0.3s;
-}
-.submit-btn:hover { background: var(--gold-light); transform: translateY(-2px); }
+South Bay Mom
+Events & Experiences
+How It Works
+Simple, personal,
+and always handled.
+01
+Reach Out
+Fill out our contact form or call directly. Tell us what you need — no detail is too small.
 
-/* ── FOOTER ── */
-footer {
-  background: #111B2E;
-  padding: 40px 60px;
-  display: flex; justify-content: space-between; align-items: center;
-}
-.footer-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 18px; font-weight: 400;
-  color: var(--white); letter-spacing: 0.05em;
-}
-.footer-tagline { font-size: 11px; color: rgba(255,255,255,0.25); letter-spacing: 0.08em; margin-top: 4px; }
-.footer-links { display: flex; gap: 36px; }
-.footer-links a { font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; color: rgba(255,255,255,0.3); text-decoration: none; transition: color 0.3s; }
-.footer-links a:hover { color: var(--gold); }
-.footer-copy { font-size: 11px; color: rgba(255,255,255,0.2); }
+02
+We Talk
+We'll get back to you within 24 hours to discuss your needs, timeline and any specifics.
 
-/* ── ANIMATIONS ── */
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(22px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-.reveal { opacity: 0; transform: translateY(26px); transition: opacity 0.75s ease, transform 0.75s ease; }
-.reveal.visible { opacity: 1; transform: translateY(0); }
-.reveal-delay-1 { transition-delay: 0.1s; }
-.reveal-delay-2 { transition-delay: 0.2s; }
-.reveal-delay-3 { transition-delay: 0.3s; }
-.reveal-delay-4 { transition-delay: 0.4s; }
-.reveal-delay-5 { transition-delay: 0.5s; }
-</style>
-</head>
-<body>
+03
+We Handle It
+Sit back while we take care of everything — with updates along the way so you're never in the dark.
 
-<!-- NAV -->
-<nav id="nav">
-  <a href="#" class="nav-logo">South Bay & Co.</a>
-  <ul class="nav-links">
-    <li><a href="#services">Services</a></li>
-    <li><a href="#about">About</a></li>
-    <li><a href="#contact">Contact</a></li>
-  </ul>
-  <div class="nav-cta-wrap">
-    <a href="#contact" class="nav-cta">Book Now</a>
-  </div>
-</nav>
+04
+You Enjoy It
+Your pet is happy, your party is perfect, your trip is planned. Life is a little easier now.
 
-<!-- HERO -->
-<section class="hero">
-  <div class="hero-bg-pattern"></div>
-  <div class="hero-grid-lines"></div>
-  <div class="hero-left">
-    <div class="hero-eyebrow"><div class="eyebrow-line"></div>Manhattan Beach · South Bay, CA</div>
-    <h1>Your Life,<br><em>Beautifully</em><br>Handled.</h1>
-    <p class="hero-sub">South Bay & Co. is your trusted local concierge — pet care, event planning, personal styling, travel, shopping, organization and everyday errands. One call. Everything handled.</p>
-    <div class="hero-actions">
-      <a href="#contact" class="btn-primary">Get In Touch →</a>
-      <a href="#services" class="btn-secondary">View Services</a>
-    </div>
-  </div>
-  <div class="hero-right"></div>
-  <div class="hero-service-pills">
-    <div class="pill">Pet Care</div>
-    <div class="pill">Event Planning</div>
-    <div class="pill">Personal Styling</div>
-    <div class="pill">Travel Planning</div>
-    <div class="pill">Personal Shopping</div>
-    <div class="pill">Organization</div>
-    <div class="pill">Concierge</div>
-  </div>
-</section>
+Get In Touch
+Let's take some things
+off your plate.
+"Share your to-do list with us — you'll be back to enjoying your life in no time."
 
-<!-- TRUST BAR -->
-<div class="trust-bar">
-  <div class="trust-item">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#18243C" stroke-width="1"/><path d="M4.5 7l1.8 1.8L9.5 5" stroke="#18243C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    À La Carte & One-Off
-  </div>
-  <div class="trust-item">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#18243C" stroke-width="1"/><path d="M4.5 7l1.8 1.8L9.5 5" stroke="#18243C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    No Commitment Required
-  </div>
-  <div class="trust-item">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#18243C" stroke-width="1"/><path d="M4.5 7l1.8 1.8L9.5 5" stroke="#18243C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Your Trusted Local
-  </div>
-  <div class="trust-item">
-    <svg width="14" height="14" viewBox="0 0 14 14" fill="none"><circle cx="7" cy="7" r="6" stroke="#18243C" stroke-width="1"/><path d="M4.5 7l1.8 1.8L9.5 5" stroke="#18243C" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-    Response Within 24 Hours
-  </div>
-</div>
+Location
+Manhattan Beach & South Bay, CA
+Phone
+1 (917) 453-9667
+Response
+Within 24 hours, always
+First Name
+Jane
+Last Name
+Smith
+Email
+jane@email.com
+Phone
+(310) 555-0000
+Service
 
-<!-- SERVICES -->
-<section class="services-section" id="services">
-  <div class="services-header">
-    <div class="reveal">
-      <div class="section-tag"><div class="tag-line"></div>What We Do</div>
-      <h2 class="section-title">Every detail,<br><em>taken care of.</em></h2>
-    </div>
-    <div class="services-header-right reveal reveal-delay-2">
-      <p>Book exactly what you need, when you need it. No memberships, no minimums — just reliable, high-touch service from someone your neighbors already trust. Seven categories. One point of contact.</p>
-    </div>
-  </div>
-
-  <div class="services-grid">
-    <!-- Pet & Home Care -->
-    <div class="svc-card reveal">
-      <span class="svc-number">01</span>
-      <h3>Pet & Home Care</h3>
-      <p>Your pets and home looked after with the same care you'd give them yourself.</p>
-      <ul class="svc-list">
-        <li>Dog walks (30 min)</li>
-        <li>Pet sit visits (up to 1 hr)</li>
-        <li>Overnight pet & house sitting</li>
-        <li>House checks while traveling</li>
-        <li>Mail collection & plant watering</li>
-      </ul>
-      <div class="svc-price">From $35 per visit</div>
-    </div>
-
-    <!-- Event Planning -->
-    <div class="svc-card reveal reveal-delay-1">
-      <span class="svc-number">02</span>
-      <h3>Event & Party Planning</h3>
-      <p>From jaw-dropping kids birthdays to polished corporate events and romantic rehearsal dinners — every detail handled, every moment unforgettable.</p>
-      <ul class="svc-list">
-        <li>Corporate events & team celebrations</li>
-        <li>Rehearsal dinners</li>
-        <li>Kids birthday parties</li>
-        <li>Baby & bridal showers</li>
-        <li>Holiday & Christmas parties</li>
-        <li>Dinner parties & supper clubs</li>
-        <li>Vendor sourcing & booking</li>
-        <li>Day-of coordination</li>
-        <li>Pre & post event setup & cleanup</li>
-      </ul>
-      <div class="svc-price">From $200 flat</div>
-    </div>
-
-    <!-- Organization -->
-    <div class="svc-card reveal reveal-delay-2">
-      <span class="svc-number">03</span>
-      <h3>Home Organization</h3>
-      <p>A beautifully organized home changes everything. Let's create systems that actually stick.</p>
-      <ul class="svc-list">
-        <li>Closet declutter & organization</li>
-        <li>Pantry & kitchen setup</li>
-        <li>Seasonal wardrobe switchover</li>
-        <li>Moving in — unpack & organize</li>
-        <li>Home filing & paperwork systems</li>
-      </ul>
-      <div class="svc-price">From $150 flat · $85/hr</div>
-    </div>
-  </div>
-
-  <div class="services-grid-bottom">
-    <!-- Personal Styling -->
-    <div class="svc-card reveal">
-      <span class="svc-number">04</span>
-      <h3>Personal Styling</h3>
-      <p>Look and feel your best — from a wardrobe refresh to a full style overhaul.</p>
-      <ul class="svc-list">
-        <li>Wardrobe audit & edit</li>
-        <li>Outfit planning & curation</li>
-        <li>Shopping trip styling assistance</li>
-        <li>Occasion & event styling</li>
-        <li>Closet organization by look</li>
-      </ul>
-      <div class="svc-price">From $150/session</div>
-    </div>
-
-    <!-- Personal Shopping -->
-    <div class="svc-card reveal reveal-delay-1">
-      <span class="svc-number">05</span>
-      <h3>Personal Shopping</h3>
-      <p>Tell us what you need — we'll find it, buy it and bring it to your door.</p>
-      <ul class="svc-list">
-        <li>Clothing & accessory sourcing</li>
-        <li>Gift buying & wrapping</li>
-        <li>Home goods & décor shopping</li>
-        <li>Grocery & specialty food runs</li>
-        <li>Return & exchange handling</li>
-      </ul>
-      <div class="svc-price">$65/hr + cost of goods</div>
-    </div>
-
-    <!-- Travel Planning -->
-    <div class="svc-card reveal reveal-delay-2">
-      <span class="svc-number">06</span>
-      <h3>Travel Planning</h3>
-      <p>Your personal travel agent — from weekend getaways to full family vacations.</p>
-      <ul class="svc-list">
-        <li>Full trip research & itinerary</li>
-        <li>Flight & hotel sourcing</li>
-        <li>Restaurant & activity booking</li>
-        <li>Packing lists & travel prep</li>
-        <li>On-trip support & troubleshooting</li>
-      </ul>
-      <div class="svc-price">From $100 per trip</div>
-    </div>
-  </div>
-
-  <!-- Concierge full width -->
-  <div style="margin-top: 2px; background: var(--sand);">
-    <div class="svc-card reveal" style="border-left: 3px solid var(--gold);">
-      <span class="svc-number">07</span>
-      <h3>Concierge & Errands</h3>
-      <p style="max-width: 600px;">Your time is valuable. Let us handle the everyday details so you can focus on what matters most.</p>
-      <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px 40px; margin-top: 16px;">
-        <ul class="svc-list">
-          <li>General errands & pickups</li>
-          <li>Waiting at home for vendors</li>
-        </ul>
-        <ul class="svc-list">
-          <li>Airport coordination</li>
-          <li>Grocery & pantry stocking</li>
-        </ul>
-        <ul class="svc-list">
-          <li>Mail sorting & management</li>
-          <li>Back to school prep</li>
-        </ul>
-        <ul class="svc-list">
-          <li>Pharmacy & prescription runs</li>
-          <li>Dry cleaning & alterations</li>
-        </ul>
-      </div>
-      <div class="svc-price">$65/hr · 2 hour minimum</div>
-    </div>
-  </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how-section">
-  <div class="reveal">
-    <div class="section-tag"><div class="tag-line"></div>How It Works</div>
-    <h2 class="section-title">Simple by design.<br><em>Powerful in practice.</em></h2>
-  </div>
-  <div class="how-grid">
-    <div class="how-card reveal">
-      <span class="how-num">01</span>
-      <h4>Reach Out</h4>
-      <p>Fill out our contact form or DM us on Instagram. Tell us what you need — no detail is too small.</p>
-    </div>
-    <div class="how-card reveal reveal-delay-1">
-      <span class="how-num">02</span>
-      <h4>We Talk</h4>
-      <p>We'll get back to you within 24 hours to discuss your needs, timeline and budget.</p>
-    </div>
-    <div class="how-card reveal reveal-delay-2">
-      <span class="how-num">03</span>
-      <h4>We Handle It</h4>
-      <p>Sit back while we take care of everything — with updates along the way so you're never in the dark.</p>
-    </div>
-    <div class="how-card reveal reveal-delay-3">
-      <span class="how-num">04</span>
-      <h4>You Enjoy It</h4>
-      <p>Your pet is happy, your party is perfect, your trip is planned. Life is just a little easier now.</p>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section class="about-section" id="about">
-  <div class="about-left">
-    <div class="section-tag reveal"><div class="tag-line"></div>About Us</div>
-    <h2 class="section-title reveal">Your neighbor.<br><em>Your partner.</em></h2>
-    <p class="section-body reveal">South Bay & Co. was born from a simple belief — that the most valuable thing you can offer a neighbor is showing up when they need you most.</p>
-    <div class="about-stats reveal" style="margin-top: 44px;">
-      <div class="stat-box">
-        <div class="stat-num">10+</div>
-        <div class="stat-lbl">Years in South Bay</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">7</div>
-        <div class="stat-lbl">Service Categories</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">30+</div>
-        <div class="stat-lbl">Services Offered</div>
-      </div>
-      <div class="stat-box">
-        <div class="stat-num">0</div>
-        <div class="stat-lbl">Commitments Required</div>
-      </div>
-    </div>
-  </div>
-  <div class="about-right reveal">
-    <p class="about-quote">"The best service feels like it comes from a trusted friend — not a company."</p>
-    <p class="about-body">South Bay & Co. is run by a longtime Manhattan Beach local with over a decade of finance experience and a deep network throughout the South Bay community. We understand what South Bay families need because we live it alongside you every day.</p>
-    <p class="about-body" style="margin-top: 20px;">Whether it's letting your dog out in a pinch, planning your son's birthday party, finding the perfect outfit for a special occasion, or booking your family's dream vacation — we handle every detail with care, discretion and a personal touch no app can replicate.</p>
-    <div class="about-values">
-      <div class="value-row">
-        <div class="value-dot"></div>
-        <div class="value-text"><strong>Trusted by your neighbors</strong> — we're local, verified, and already known in the community</div>
-      </div>
-      <div class="value-row">
-        <div class="value-dot"></div>
-        <div class="value-text"><strong>No commitment needed</strong> — book once, book often, or just when life gets busy</div>
-      </div>
-      <div class="value-row">
-        <div class="value-dot"></div>
-        <div class="value-text"><strong>Premium, personal service</strong> — every job gets our full attention, every time</div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials-section" id="testimonials">
-  <div class="testimonials-header reveal">
-    <div class="section-tag"><div class="tag-line"></div>What Neighbors Say</div>
-    <h2 class="section-title">Trusted by the<br><em>South Bay community.</em></h2>
-  </div>
-  <div class="testimonials-grid">
-    <div class="tcard reveal">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">She came over and let my dog out three times while I was in the hospital. I didn't even have to ask twice. That kind of neighbor is one in a million.</p>
-      <div class="tcard-author">Manhattan Beach Neighbor</div>
-      <div class="tcard-location">Manhattan Beach, CA</div>
-      <div class="tcard-service">Pet & Home Care</div>
-    </div>
-    <div class="tcard reveal reveal-delay-1">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">My cat was in the best hands all weekend. I got updates, photos, everything. I came home to a happy cat and a spotless home.</p>
-      <div class="tcard-author">Local Neighbor</div>
-      <div class="tcard-location">Manhattan Beach, CA</div>
-      <div class="tcard-service">Pet & Home Care</div>
-    </div>
-    <div class="tcard reveal reveal-delay-2">
-      <div class="tcard-quote">"</div>
-      <p class="tcard-text">I don't know how I would have pulled off my son's birthday party without her. Every detail was handled perfectly. Worth every single penny.</p>
-      <div class="tcard-author">South Bay Mom</div>
-      <div class="tcard-location">South Bay, CA</div>
-      <div class="tcard-service">Event Planning</div>
-    </div>
-  </div>
-</section>
-
-<!-- CONTACT -->
-<section class="contact-section" id="contact">
-  <div class="contact-left">
-    <div class="section-tag reveal"><div class="tag-line"></div>Get In Touch</div>
-    <h2 class="section-title reveal">Let's make your<br><em>life easier.</em></h2>
-    <p class="reveal">Tell us what you need and we'll get back to you within 24 hours. No commitment, no pressure — just a conversation about how we can help.</p>
-    <div class="contact-details reveal">
-      <div class="cdetail">
-        <div class="cdetail-icon">📍</div>
-        <div class="cdetail-body">
-          <div class="cdetail-label">Location</div>
-          <div class="cdetail-value">Manhattan Beach & South Bay, CA</div>
-        </div>
-      </div>
-      <div class="cdetail">
-        <div class="cdetail-icon">⏱</div>
-        <div class="cdetail-body">
-          <div class="cdetail-label">Response Time</div>
-          <div class="cdetail-value">Within 24 hours, always</div>
-        </div>
-      </div>
-      <div class="cdetail">
-        <div class="cdetail-icon">📸</div>
-        <div class="cdetail-body">
-          <div class="cdetail-label">Instagram</div>
-          <div class="cdetail-value">@southbayandco</div>
-        </div>
-      </div>
-      <div class="cdetail">
-        <div class="cdetail-icon">🌐</div>
-        <div class="cdetail-body">
-          <div class="cdetail-label">Website</div>
-          <div class="cdetail-value">southbayandco.com</div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="contact-right">
-    <div class="contact-form reveal">
-      <div class="form-row">
-        <div class="fg">
-          <label>First Name</label>
-          <input type="text" placeholder="Jane">
-        </div>
-        <div class="fg">
-          <label>Last Name</label>
-          <input type="text" placeholder="Smith">
-        </div>
-      </div>
-      <div class="fg">
-        <label>Email</label>
-        <input type="email" placeholder="jane@email.com">
-      </div>
-      <div class="fg">
-        <label>Phone (optional)</label>
-        <input type="tel" placeholder="(310) 555-0000">
-      </div>
-      <div class="fg">
-        <label>Service Needed</label>
-        <select>
-          <option value="">Select a service...</option>
-          <option>Pet & Home Care</option>
-          <option>Event & Party Planning</option>
-          <option>Home Organization</option>
-          <option>Personal Styling</option>
-          <option>Personal Shopping</option>
-          <option>Travel Planning</option>
-          <option>Concierge & Errands</option>
-          <option>Multiple Services</option>
-          <option>Not Sure Yet</option>
-        </select>
-      </div>
-      <div class="fg">
-        <label>Tell us more</label>
-        <textarea placeholder="What do you need help with? Any details help us respond faster and better..."></textarea>
-      </div>
-      <button class="submit-btn">Send Message →</button>
-    </div>
-  </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-  <div>
-    <div class="footer-logo">South Bay & Co.</div>
-    <div class="footer-tagline">Your neighborhood. Handled.</div>
-  </div>
-  <div class="footer-links">
-    <a href="#services">Services</a>
-    <a href="#about">About</a>
-    <a href="#contact">Contact</a>
-    <a href="#">@southbayandco</a>
-  </div>
-  <div class="footer-copy">© 2025 South Bay & Co. · Manhattan Beach, CA</div>
-</footer>
-
-<script>
-  const nav = document.getElementById('nav');
-  window.addEventListener('scroll', () => {
-    nav.classList.toggle('scrolled', window.scrollY > 60);
-  });
-
-  const reveals = document.querySelectorAll('.reveal');
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('visible');
-        observer.unobserve(entry.target);
-      }
-    });
-  }, { threshold: 0.08 });
-  reveals.forEach(el => observer.observe(el));
-</script>
-</body>
-</html>
+What can we help with?
+Tell Us More
+What's on your to-do list? No task is too big or small.
+Send Message
+South Bay & Co.
+Your neighborhood. Handled.
+Services
+About
+Contact
+© 2025 South Bay & Co. · Manhattan Beach, CA
